@@ -37,8 +37,12 @@ class _MyAppState extends State<MyApp> {
     }
 
     var quantity = (2.0.toString().split(".")[0] + "." + (2.0.toString().split(".")[1] + "0000").substring(0, 4)) + " EOS";
-    print("quantity -----=  ：$quantity");
-    await EosPluginAndroid.transfer("eosio.token", "http://dev.cryptolions.io:38888", "vo2ye2oxs2qp", "5HvhDiNmFE8wMnBXbkuCZtiEVfbqRFePf51TzAf8XvX5XZomq4e", "wumingdengng", quantity, "33");
+    var textResult = await EosPluginAndroid.transfer("eosio.token", "http://134.175.121.14:8888", "huangbolinnb", "5HvhDiNmFE8wMnBXbkuCZtiEVfbqRFePf51TzAf8XvX5XZomq4e", "storybankone", quantity, "33");
+    print('交易是否成功：$textResult');
+
+    //var quantity = (2.0.toString().split(".")[0] + "." + (2.0.toString().split(".")[1] + "0000").substring(0, 4)) + " EOS";
+    //print("quantity -----=  ：$quantity");
+    //await EosPluginAndroid.transfer("eosio.token", "http://dev.cryptolions.io:38888", "vo2ye2oxs2qp", "5HvhDiNmFE8wMnBXbkuCZtiEVfbqRFePf51TzAf8XvX5XZomq4e", "wumingdengng", quantity, "33");
 
     if (!mounted) return;
 

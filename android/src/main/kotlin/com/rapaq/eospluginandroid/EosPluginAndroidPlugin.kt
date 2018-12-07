@@ -20,7 +20,7 @@ class EosPluginAndroidPlugin: MethodCallHandler {
     @JvmStatic
     fun registerWith(registrar: Registrar): Unit {
       val channel = MethodChannel(registrar.messenger(), "com.rapaq.eos_plugin_android")
-      channel.setMethodCallHandler(EosPlugin())
+      channel.setMethodCallHandler(EosPluginAndroidPlugin())
     }
   }
 

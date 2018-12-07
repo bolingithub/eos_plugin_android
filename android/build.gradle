@@ -37,8 +37,25 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // mnemonic-sdk 导入
+    implementation 'org.slf4j:slf4j-nop:1.7.25'
+    implementation 'com.lhalcyon:bip32:1.0.0'
+    implementation 'io.github.novacrypto:BIP44:0.0.3'
+    implementation 'com.madgag.spongycastle:core:1.58.0.0@jar'
+
+    // wallet-eos 导入
+    implementation 'com.squareup.retrofit2:converter-jackson:2.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.59'
 }
